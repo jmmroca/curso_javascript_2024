@@ -6,61 +6,69 @@
         </div>
         <div id="logo-javascript">JS</div>
     </div>
-<p>
-    En esta sección, aprenderemos sobre las variables en JavaScript, cómo declararlas, inicializarlas y las buenas prácticas para nombrarlas.
-</p>
+    <p>
+        En esta sección, aprenderemos sobre las variables en JavaScript, cómo declararlas, inicializarlas y las buenas
+        prácticas para nombrarlas.
+    </p>
 
 </section>
 <section>
     <p>
+        ¿Qué es una variable?
+    </p>
+    <p>
         Una variable es un espacio en memoria que almacena un valor
     </p>
-<p>
-    La declaración de una variable se puede hacer con las palabras clave:
+    <p>
+        ¿Cómo declarar una variable?
+    </p>
+    <p>
+        La declaración de una variable se puede hacer con las palabras clave:
     <ul>
-        <li>var</li>
+        <li>var (desaconsejado por los desarrolladores por obsoleto)</li>
         <li>let</li>
         <li>const</li>
-    </ul> 
-</p>
+    </ul>
+    </p>
+    <p>
+        La inicialización de una variable es asignar un valor a la variable
+    </p>
 <p>
-    La inicialización de una variable es asignar un valor a la variable
+    Declaración de una variable global:
 </p>
 
-Declaración de una variable global:
-
-<pre><code class="language-javascript">
+    <pre><code class="language-javascript">
         var nombreConVar = "Juan Perez"; // Declaración e inicialización de una variable
     </code>
 </pre>
-para poder ver el valor de la variable en la consola
-<pre>
+    para poder ver el valor de la variable en la consola
+    <pre>
     <code class="language-javascript">
         console.log(nombreConVar);
     </code>
 </pre>
 
-Declaración e inicialización de una variable con let, que es una variable de bloque
-<pre><code id="codigo" class="language-javascript">
+    Declaración e inicialización de una variable con let, que es una variable de bloque
+    <pre><code id="codigo" class="language-javascript">
     let nombreConLet = "Juan Perez"; // Declaración e inicialización de una variable
     console.log(nombreConLet);
 </code></pre>
-Declaración e inicialización de una variable con const, que es una constante de bloque
-<pre><code class="language-javascript">
+    Declaración e inicialización de una variable con const, que es una constante de bloque
+    <pre><code class="language-javascript">
     const nombreConConst = "Juan Perez"; // Declaración e inicialización de una variable
     console.log(nombreConConst);
 </code></pre>
-si intentamos cambiar el valor de una constante, obtendremos un error
-<pre><code class="language-javascript">
+    si intentamos cambiar el valor de una constante, obtendremos un error
+    <pre><code class="language-javascript">
     // nombreConConst = "Pedro Gomez"; // Esto generará un error si decomentamos esta línea
 </code>
 </pre>
-<p>
-    Buenas prácticas para nombrar variables:
-</p>
+    <p>
+        Buenas prácticas para nombrar variables:
+    </p>
 
-1. Usar nombres descriptivos: el nombre de la variable debe indicar claramente su propósito
-<pre>
+    1. Usar nombres descriptivos: el nombre de la variable debe indicar claramente su propósito
+    <pre>
     <code class="language-javascript">
         let edadUsuario = 30; // Buen nombre
         // let e = 30; // Mal nombre
@@ -68,78 +76,54 @@ si intentamos cambiar el valor de una constante, obtendremos un error
     </code>
 </pre>
 
-2. Usar camelCase para múltiples palabras: la primera palabra en minúscula y las siguientes con la primera letra en
-mayúscula
-<pre>
+    2. Usar camelCase para múltiples palabras: la primera palabra en minúscula y las siguientes con la primera letra en
+    mayúscula
+    <pre>
     <code class="language-javascript">
         let nombreCompletoUsuario = "Juan Perez"; // Buen uso de camelCase
         console.log(nombreCompletoUsuario);
         // let Nombre_completo_usuario = "Juan Perez"; // Mal uso de camelCase
     </code>
 </pre>
-3. Evitar palabras reservadas: no usar palabras que tienen un significado especial en JavaScript
-<pre>
+    3. Evitar palabras reservadas: no usar palabras que tienen un significado especial en JavaScript
+    <pre>
     <code class="language-javascript">
         // let var = 10; // Mal uso, 'var' es una palabra reservada
         let variable = 10; // Buen uso
         console.log(variable);
     </code>
 </pre>
-4. Ser consistente: usar un estilo consistente para nombrar variables en todo el código
-<pre>
+    4. Ser consistente: usar un estilo consistente para nombrar variables en todo el código
+    <pre>
     <code class="language-javascript">
         let numeroDeTelefono = "123-456-7890"; // Consistente con camelCase
         console.log(numeroDeTelefono);
         // let numero_de_telefono = "123-456-7890"; // Inconsistente con camelCase
     </code>
 </pre>
-5. Evitar abreviaturas innecesarias: usar nombres completos para mayor claridad
-<pre>
+    5. Evitar abreviaturas innecesarias: usar nombres completos para mayor claridad
+    <pre>
     <code class="language-javascript">
         let direccionUsuario = "Calle Falsa 123"; // Buen nombre
         console.log(direccionUsuario);
         // let dirUsr = "Calle Falsa 123"; // Mal nombre
     </code>
 </pre>
-6. Usar prefijos o sufijos cuando sea apropiado: para indicar el tipo de dato o el propósito
-<pre>
+    6. Usar prefijos o sufijos cuando sea apropiado: para indicar el tipo de dato o el propósito
+    <pre>
     <code class="language-javascript">
         let isUsuarioActivo = true; // Buen uso del prefijo 'is' para indicar un booleano
         console.log(isUsuarioActivo);
         // let usuarioActivo = true; // Menos claro sin el prefijo 'is'
     </code>
 </pre>
-7. Evitar el uso excesivo de mayúsculas y minúsculas: para evitar confusiones
-<pre>
+    7. Evitar el uso excesivo de mayúsculas y minúsculas: para evitar confusiones
+    <pre>
     <code class="language-javascript">
         let precioProducto = 100; // Buen uso
         console.log(precioProducto);
         // let PrecioProducto = 100; // Mal uso, puede causar confusión al leer el código
     </code>
 </pre>
-8. Usar nombres descriptivos y claros: para facilitar la comprensión del código
-<pre>
-    <code class="language-javascript">
-        let nombreCompleto = "Juan Perez"; // Buen uso
-        console.log(nombreCompleto);
-        // let NombreCompleto = "Juan Perez"; // Mal uso, puede causar confusión al leer el código
-    </code>
-</pre>
-9. Usar nombres cortos y concisos: para facilitar la comprensión del código
-<pre>
-    <code class="language-javascript">
-        let precio = 100; // Buen uso
-        console.log(precio);
-        // let p = 100; // Mal uso, puede causar confusión al leer el código
-    </code>
-</pre>
-10. Usar nombres descriptivos y claros: para facilitar la comprensión del código
-<pre>
-    <code class="language-javascript">
-        let nombre = "Juan Perez"; // Buen uso
-        console.log(nombre);
-        // let n = "Juan Perez"; // Mal uso, puede causar confusión al leer el código
-    </code>
-</pre>
-Resumen: seguir estas buenas prácticas ayuda a mantener el código limpio, legible y fácil de mantener.
+    Resumen: seguir estas buenas prácticas ayuda a mantener el código limpio, legible y fácil de mantener.
 </section>
