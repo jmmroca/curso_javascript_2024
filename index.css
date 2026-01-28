@@ -1,0 +1,36 @@
+pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  margin-left: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  width: 80%;
+}
+
+code {
+  font-family: Consolas, Monaco, 'Courier New', monospace;
+  font-size: 14px;
+  width: 90%;
+}
+#title-container {
+  display: flex;
+  align-items:end;
+  margin-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#title-container #text {
+  margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #8a0cf8;
+    margin-bottom: 10px;
+}
+#title-container #logo-javascript {
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    width: 50px;
+    background-color: yellow;
+    color: black;
+}

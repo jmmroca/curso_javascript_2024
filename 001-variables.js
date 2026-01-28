@@ -1,4 +1,3 @@
-
 // Una variable es un espacio en memoria que almacena un valor
 
 // Declaración de una variable: se puede hacer con las palabras clave var, let o const
@@ -20,26 +19,59 @@ console.log(nombreConConst);
 // nombreConConst = "Pedro Gomez"; // Esto generará un error si decomentamos esta línea
 
 // Buenas prácticas para nombrar variables:
+
 // 1. Usar nombres descriptivos: el nombre de la variable debe indicar claramente su propósito
 let edadUsuario = 30; // Buen nombre
 // let e = 30; // Mal nombre   
 console.log(edadUsuario);
+
 // 2. Usar camelCase para múltiples palabras: la primera palabra en minúscula y las siguientes con la primera letra en mayúscula
 let nombreCompletoUsuario = "Juan Perez"; // Buen uso de camelCase
 console.log(nombreCompletoUsuario);
 // let Nombre_completo_usuario = "Juan Perez"; // Mal uso de camelCase
+
 // 3. Evitar palabras reservadas: no usar palabras que tienen un significado especial en JavaScript
 // let var = 10; // Mal uso, 'var' es una palabra reservada
 let variable = 10; // Buen uso
 console.log(variable);
+
 // 4. Ser consistente: usar un estilo consistente para nombrar variables en todo el código
 let numeroDeTelefono = "123-456-7890"; // Consistente con camelCase
 console.log(numeroDeTelefono);
 // let numero_de_telefono = "123-456-7890"; // Inconsistente con camelCase
+
 // 5. Evitar abreviaturas innecesarias: usar nombres completos para mayor claridad
 let direccionUsuario = "Calle Falsa 123"; // Buen nombre
 console.log(direccionUsuario);
 // let dirUsr = "Calle Falsa 123"; // Mal nombre
+
 // 6. Usar prefijos o sufijos cuando sea apropiado: para indicar el tipo de dato o el propósito
 let isUsuarioActivo = true; // Buen uso del prefijo 'is' para indicar un booleano
 console.log(isUsuarioActivo);
+// let usuarioActivo = true; // Menos claro sin el prefijo 'is'     
+
+// 7. Evitar el uso excesivo de mayúsculas y minúsculas: para evitar confusiones
+let precioProducto = 100; // Buen uso
+console.log(precioProducto);
+// let PrecioProducto = 100; // Mal uso, puede causar confusión al leer el código
+
+// 8. Usar nombres descriptivos y claros: para facilitar la comprensión del código
+let nombreCompleto = "Juan Perez"; // Buen uso
+console.log(nombreCompleto);
+// let NombreCompleto = "Juan Perez"; // Mal uso, puede causar confusión al leer el código
+
+// 9. Usar nombres cortos y concisos: para facilitar la comprensión del código
+let precio = 100; // Buen uso
+console.log(precio);
+// let p = 100; // Mal uso, puede causar confusión al leer el código
+
+// 10. Usar nombres descriptivos y claros: para facilitar la comprensión del código
+let nombre = "Juan Perez"; // Buen uso
+console.log(nombre);
+// let n = "Juan Perez"; // Mal uso, puede causar confusión al leer el código
+
+// Resumen: seguir estas buenas prácticas ayuda a mantener el código limpio, legible y fácil de mantener.
+
+
+
+
