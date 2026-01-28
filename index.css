@@ -6,8 +6,6 @@ body {
   padding: 20px;
 }
 pre {
-  background: #1e1e1e;
-  color: #d4d4d4;
   margin-left: 20px;
   padding: 15px;
   border-radius: 6px;
@@ -15,9 +13,15 @@ pre {
   width: 80%;
 }
 
+p:hover {
+  color: #f80c57;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: large;
+  transition: all 0.3s ease;
+}
+
 code {
-  font-family: Consolas, Monaco, "Courier New", monospace;
-  font-size: 14px;
   width: 90%;
 }
 #title-container {
