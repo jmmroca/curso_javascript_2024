@@ -1,16 +1,30 @@
-# React + Vite
+﻿# curso_javascript_2024
+Curso de Udemy de Manuel Gomez Martinez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Curso en Udemy ---> https://www.udemy.com/course/curso-javascript-2021
 
-Currently, two official plugins are available:
+TODO:hacer dos páginas, o incluso tres paginas distintas, para explicar las variables.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    1. En la primera explicamos la introduccion y bases sobre variables.
+    
+    2. En la segunda, explicamos las reglas restrictivas de las variables.
+    
+    3. Y en la tercera, las buenas prácticas al utilizar variables.
+    
+    Con esto conseguimos varios objetivos:
+    
+    1. menos aglomeracion de la informacion en cada página.
+    
+    2. más claridad en la exposición de la información.
+    
+    3. Estructurar mejor el aprendizaje
 
-## React Compiler
+Reglas de las variables:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Let no permite declarar dos variables con el mismo nombre exacto.
+2. let permite declarar una variable y inicializarla posteriormente.
+3. var permite declarar dos variables con el mismo nombre.
+4. var permite declarar sin inicializar la variable.
+5. const no permite declarar una variable sin inicializar.
+6. const no permite declarar dos variables con el mismo nombre.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
