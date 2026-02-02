@@ -34,6 +34,11 @@ code {
   width: 60px;
   height: 60px;
   border-radius: 10px;
+  margin-right: 20px;
+}
+.imagen-grande {
+  width: 140px !important;
+  height: auto !important;
 }
 #title-container #text {
   /* margin-left: 20px; */

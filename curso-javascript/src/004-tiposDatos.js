@@ -3,9 +3,7 @@ const htmlVariables4 = `
         <div id="title-container">
           <div id="image">
             <img
-              width="200"
-              height="auto"
-              style={{ width: "300px", height: "auto" }}
+              class="imagen-grande"
               src="/public/data_type_javascript.png"
               alt="tipos de datos javascript"
             />
