@@ -174,15 +174,34 @@ const htmlVariables4 = `
         
         <pre>
           <code class="language-javascript">
-            typeof 42;        // "number"
-            typeof "hola";    // "string"
-            typeof true;      // "boolean"
-            typeof undefined; // "undefined"
-            typeof null;      // "object"  (bug histórico)
-            typeof {};        // "object"
-            typeof [];        // "object"
-            typeof function(){}; // "function"
-          </code>
+            let edad=42;
+            typeof edad;              // "number"
+
+            let saludo="hola";
+            typeof saludo;              // "string"
+
+            let isOrange=true;
+            typeof isOrange;        // "boolean"
+
+            let nombre;
+            typeof nombre;          // "undefined"
+
+            let miNombre=null;
+            typeof miNombre;        // "object"  (bug histórico)
+
+            let coche={
+                marca:"Fiat",
+                modelo:"500"
+            };
+            typeof coche;           // "object"
+
+            let array=[  "rojo", "azul", "verde"];         
+            typeof array;           // "object"
+
+            let funcion=function(){};
+            typeof funcion;       // "function"
+
+            </code>
         </pre>
 
       </section>

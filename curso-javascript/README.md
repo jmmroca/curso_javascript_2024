@@ -3,7 +3,7 @@ Curso de Udemy de Manuel Gomez Martinez
 
 Curso en Udemy ---> https://www.udemy.com/course/curso-javascript-2021
 
-TODO:hacer dos páginas, o incluso tres paginas distintas, para explicar las variables.
+Páginas explicando las variables:
 
     1. En la primera explicamos la introduccion y bases sobre variables.
     
