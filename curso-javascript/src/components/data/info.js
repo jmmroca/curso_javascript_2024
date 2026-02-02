@@ -1,6 +1,6 @@
 export const infoCurso = [{
   titulo: "Curso de JavaScript",
-  descripcion: "Variables en JavaScript",
+  descripcion: "Variables en Javascript",
   autor: "jmmroca",    
     fechaActualizacion: "2024-06-15",
     version: "1.0.0",
@@ -8,7 +8,7 @@ export const infoCurso = [{
 },
 {
   titulo: "Curso de JavaScript",
-  descripcion: "Variables II en JavaScript", 
+  descripcion: "Variables II en Javascript", 
     autor: "jmmroca",
     fechaActualizacion: "2024-05-20",
     version: "2.1.0",
@@ -16,17 +16,17 @@ export const infoCurso = [{
 },
 {
   titulo: "Curso de JavaScript",
-  descripcion: "Variables III en JavaScript",
-    autor: "John Doe",  
+  descripcion: "Variables III en Javascript",
+    autor: "jmmroca",  
     fechaActualizacion: "2024-04-10",
     version: "3.0.2",
     licencia: "Apache-2.0",
 },
 
 {
-  titulo: "Curso de C++",
-  descripcion: "Aprende a programar en C++",
-    autor: "Jane Smith",
+  titulo: "Curso de JavaScript",
+  descripcion: "Aprende a programar en Javascript",
+    autor: "jmmroca",
     fechaActualizacion: "2024-03-15",
     version: "4.2.0",
     licencia: "MIT",
