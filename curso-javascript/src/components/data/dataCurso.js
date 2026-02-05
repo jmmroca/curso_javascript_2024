@@ -2,8 +2,8 @@ import htmlVariables from "../../001-variables.js";
 import htmlVariables2 from "../../002-variables.js";
 import htmlVariables3 from "../../003-variables.js";
 import htmlVariables4 from "../../004-tiposDatos.js";
-
-
+import htmlVariables5 from "../../005-ambitosVariables.js";
+import htmlVariables6 from "../../006-Operadores.js";
 
 export const dataCurso = {
     paginas: [
@@ -29,8 +29,13 @@ export const dataCurso = {
         }, 
         {
             id: 5,
-            titulo: "Funciones en JavaScript",  
-            contenido: "Contenido de la pagina de Funciones..."
+            titulo: "Ámbitos de variables en JavaScript",  
+            contenido: htmlVariables5
+        },
+        {
+            id: 6,
+            titulo: "Operadores en JavaScript",  
+            contenido: htmlVariables6
         },
         // Agregar mas paginas segun sea necesario
     ]

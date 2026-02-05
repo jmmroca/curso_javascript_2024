@@ -43,86 +43,86 @@ const htmlVariables4 = `
           <tbody>
             <tr class="prim">
               <td>
-                <code>number</code>
+                <code class="language-javascript">number</code>
               </td>
               <td>Números (enteros, decimales, NaN, Infinity)</td>
               <td>
-                <code>42</code>, <code>3.14</code>, <code>NaN</code>
+                <code class="language-javascript">42</code>, <code class="language-javascript">3.14</code>, <code class="language-javascript">NaN</code>
               </td>
               <td>
-                <code>"number"</code>
+                <code class="language-javascript">"number"</code>
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>bigint</code>
+                <code class="language-javascript">bigint</code>
               </td>
               <td>Números enteros muy grandes</td>
               <td>
-                <code>12345678901234567890n</code>
+                <code class="language-javascript">12345678901234567890n</code>
               </td>
               <td>
-                <code>"bigint"</code>
+                <code class="language-javascript">"bigint"</code>
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>string</code>
+                <code class="language-javascript">string</code>
               </td>
               <td>Texto/cadenas</td>
               <td>
-                <code>"Hola"</code>, <code>'mundo'</code>
+                <code class="language-javascript">"Hola"</code>, <code class="language-javascript">'mundo'</code>
               </td>
               <td>
-                <code>"string"</code>
+                <code class="language-javascript">"string"</code>
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>boolean</code>
+                <code class="language-javascript">boolean</code>
               </td>
               <td>Verdadero/falso</td>
               <td>
-                <code>true</code>, <code>false</code>
+                <code class="language-javascript">true</code>, <code class="language-javascript">false</code>
               </td>
               <td>
-                <code>"boolean"</code>
+                <code class="language-javascript">"boolean"</code>
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>null</code>
+                <code class="language-javascript">null</code>
               </td>
               <td>Valor nulo intencional</td>
               <td>
-                <code>null</code>
+                <code class="language-javascript">null</code>
               </td>
               <td>
-                <code>"object"</code> ⚠️
+                <code class="language-javascript">"object"</code> ⚠️
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>undefined</code>
+                <code class="language-javascript">undefined</code>
               </td>
               <td>Variable no asignada</td>
               <td>
-                <code>let x;</code>
+                <code class="language-javascript">let x;</code>
               </td>
               <td>
-                <code>"undefined"</code>
+                <code class="language-javascript">"undefined"</code>
               </td>
             </tr>
             <tr class="prim">
               <td>
-                <code>symbol</code>
+                <code class="language-javascript">symbol</code>
               </td>
               <td>Identificador único</td>
               <td>
-                <code>Symbol('id')</code>
+                <code class="language-javascript">Symbol('id')</code>
               </td>
               <td>
-                <code>"symbol"</code>
+                <code class="language-javascript">"symbol"</code>
               </td>
             </tr>
           </tbody>
@@ -142,28 +142,28 @@ const htmlVariables4 = `
             </thead>
             <tbody>
                 <tr class="no-prim">
-                    <td><code>object</code></td>
+                    <td><code class="language-javascript">object</code></td>
                     <td>Objetos, arrays, funciones, fechas</td>
                     <td>
                           <pre>
-                                <code>
-                                  {}
+                                <code class="language-javascript">
+          {}
                                 </code>
                             </pre>
                             ,
                           <pre>
-                                <code>
-                                  []
+                                <code class="language-javascript">
+          []
                                 </code>
                           </pre>
                             ,
                           <pre>
-                                <code>
-                                  ()=>{}
+                                <code class="language-javascript">
+          ()=>{}
                                 </code>
                           </pre>
                     </td>
-                    <td><code>"object"</code></td>
+                    <td><code class="language-javascript">"object"</code></td>
                 </tr>
             </tbody>
         </table>

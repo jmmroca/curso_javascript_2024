@@ -25,7 +25,7 @@ export const infoCurso = [{
 
 {
   titulo: "Curso de JavaScript",
-  descripcion: "Aprende a programar en Javascript",
+  descripcion: "Tipos de datos en Javascript",
     autor: "jmmroca",
     fechaActualizacion: "2024-03-15",
     version: "4.2.0",
@@ -33,9 +33,18 @@ export const infoCurso = [{
 },
 
 {
-  titulo: "Curso de Ruby",
-  descripcion: "Aprende a programar en Ruby",
-    autor: "John Doe",
+  titulo: "Curso de JavaScript",
+  descripcion: "Ámbitos de variables en JavaScript",
+    autor: "jmmroca",
+    fechaActualizacion: "2024-02-20",
+    version: "5.0.0",
+    licencia: "Apache-2.0",
+},
+
+{
+  titulo: "Curso de JavaScript",
+  descripcion: "Operadores en JavaScript",
+    autor: "jmmroca",
     fechaActualizacion: "2024-02-20",
     version: "5.0.0",
     licencia: "Apache-2.0",
