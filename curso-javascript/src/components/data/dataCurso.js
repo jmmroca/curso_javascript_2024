@@ -1,9 +1,12 @@
-import htmlVariables from "../../001-variables.js";
-import htmlVariables2 from "../../002-variables.js";
-import htmlVariables3 from "../../003-variables.js";
+
+
 import htmlVariables4 from "../../004-tiposDatos.js";
 import htmlVariables5 from "../../005-ambitosVariables.js";
 import htmlVariables6 from "../../006-Operadores.js";
+import Variables001 from "../../Variables001.jsx";
+import Variables002 from "../../Variables002.jsx";
+import Variables003 from "../../Variables003.jsx";
+
 
 
 export const dataCurso = {
@@ -12,19 +15,19 @@ export const dataCurso = {
       id: 1,
       slug: "variables",
       titulo: "Variables en JavaScript",
-      contenido: htmlVariables,
+      contenido: Variables001,
     },
     {
       id: 2,
       slug: "variables-ii",
       titulo: "Variables II en JavaScript",
-      contenido: htmlVariables2,
+      contenido: Variables002,
     },
     {
       id: 3,
       slug: "variables-iii",
       titulo: "Variables III en JavaScript",
-      contenido: htmlVariables3,
+      contenido: Variables003,
     },
     {
       id: 4,
