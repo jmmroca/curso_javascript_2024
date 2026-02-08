@@ -1,9 +1,14 @@
-const htmlVariables4 = `
-      <section>
+import React from 'react'
+import BloqueCodigo from './components/BloqueCodigo';
+
+function TiposDatos004({ copySnippet }) {
+  return (
+    <>
+            <section>
         <div id="title-container">
           <div id="image">
             <img
-              class="imagen-grande"
+              className="imagen-grande"
               src="/public/data_type_javascript.png"
               alt="tipos de datos javascript"
             />
@@ -41,88 +46,88 @@ const htmlVariables4 = `
             </tr>
           </thead>
           <tbody>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">number</code>
+                <code className="language-javascript">number</code>
               </td>
               <td>Números (enteros, decimales, NaN, Infinity)</td>
               <td>
-                <code class="language-javascript">42</code>, <code class="language-javascript">3.14</code>, <code class="language-javascript">NaN</code>
+                <code className="language-javascript">42</code>, <code className="language-javascript">3.14</code>, <code className="language-javascript">NaN</code>
               </td>
               <td>
-                <code class="language-javascript">"number"</code>
+                <code className="language-javascript">"number"</code>
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">bigint</code>
+                <code className="language-javascript">bigint</code>
               </td>
               <td>Números enteros muy grandes</td>
               <td>
-                <code class="language-javascript">12345678901234567890n</code>
+                <code className="language-javascript">12345678901234567890n</code>
               </td>
               <td>
-                <code class="language-javascript">"bigint"</code>
+                <code className="language-javascript">"bigint"</code>
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">string</code>
+                <code className="language-javascript">string</code>
               </td>
               <td>Texto/cadenas</td>
               <td>
-                <code class="language-javascript">"Hola"</code>, <code class="language-javascript">'mundo'</code>
+                <code className="language-javascript">"Hola"</code>, <code className="language-javascript">'mundo'</code>
               </td>
               <td>
-                <code class="language-javascript">"string"</code>
+                <code className="language-javascript">"string"</code>
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">boolean</code>
+                <code className="language-javascript">boolean</code>
               </td>
               <td>Verdadero/falso</td>
               <td>
-                <code class="language-javascript">true</code>, <code class="language-javascript">false</code>
+                <code className="language-javascript">true</code>, <code className="language-javascript">false</code>
               </td>
               <td>
-                <code class="language-javascript">"boolean"</code>
+                <code className="language-javascript">"boolean"</code>
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">null</code>
+                <code className="language-javascript">null</code>
               </td>
               <td>Valor nulo intencional</td>
               <td>
-                <code class="language-javascript">null</code>
+                <code className="language-javascript">null</code>
               </td>
               <td>
-                <code class="language-javascript">"object"</code> ⚠️
+                <code className="language-javascript">"object"</code> ⚠️
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">undefined</code>
+                <code className="language-javascript">undefined</code>
               </td>
               <td>Variable no asignada</td>
               <td>
-                <code class="language-javascript">let x;</code>
+                <code className="language-javascript">let x;</code>
               </td>
               <td>
-                <code class="language-javascript">"undefined"</code>
+                <code className="language-javascript">"undefined"</code>
               </td>
             </tr>
-            <tr class="prim">
+            <tr className="prim">
               <td>
-                <code class="language-javascript">symbol</code>
+                <code className="language-javascript">symbol</code>
               </td>
               <td>Identificador único</td>
               <td>
-                <code class="language-javascript">Symbol('id')</code>
+                <code className="language-javascript">Symbol('id')</code>
               </td>
               <td>
-                <code class="language-javascript">"symbol"</code>
+                <code className="language-javascript">"symbol"</code>
               </td>
             </tr>
           </tbody>
@@ -141,42 +146,44 @@ const htmlVariables4 = `
                 </tr>
             </thead>
             <tbody>
-                <tr class="no-prim">
-                    <td><code class="language-javascript">object</code></td>
+                <tr className="no-prim">
+                    <td><code className="language-javascript">object</code></td>
                     <td>Objetos, arrays, funciones, fechas</td>
                     <td>
                           <pre>
-                                <code class="language-javascript">
-          {}
+                                <code className="language-javascript">
+          {`{}`}
                                 </code>
                             </pre>
-                            ,
+                            
                           <pre>
-                                <code class="language-javascript">
-          []
+                                <code className="language-javascript">
+          {`[]`}
                                 </code>
                           </pre>
-                            ,
+                            
                           <pre>
-                                <code class="language-javascript">
-          ()=>{}
+                                <code className="language-javascript">
+         {`()=>{}`}
                                 </code>
                           </pre>
                     </td>
-                    <td><code class="language-javascript">"object"</code></td>
+                    <td><code className="language-javascript">"object"</code></td>
                 </tr>
             </tbody>
         </table>
       </section>
       <section>
-        
-        <pre>
-          <code class="language-javascript">
+
+        <BloqueCodigo
+          copySnippet={copySnippet}
+          titulo="1. Tipos primitivos"
+          codigo={`
             let edad=42;
-            typeof edad;              // "number"
+            typeof edad;            // "number"
 
             let saludo="hola";
-            typeof saludo;              // "string"
+            typeof saludo;          // "string"
 
             let isOrange=true;
             typeof isOrange;        // "boolean"
@@ -197,12 +204,11 @@ const htmlVariables4 = `
             typeof array;           // "object"
 
             let funcion=function(){};
-            typeof funcion;       // "function"
-
-            </code>
-        </pre>
-
+            typeof funcion;       // "function"`}
+        />  
       </section>
-    `;
+    </>
+  )
+}
 
-export default htmlVariables4;
+export default TiposDatos004;

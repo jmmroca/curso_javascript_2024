@@ -54,4 +54,13 @@ export const infoCurso = [
     version: "5.0.0",
     licencia: "Apache-2.0",
   },
+  {
+    slug: "concatenacion",
+    titulo: "Curso de JavaScript",
+    descripcion: "Concatenación en JavaScript",
+    autor: "jmmroca",
+    fechaActualizacion: "2024-02-20",
+    version: "5.0.0",
+    licencia: "Apache-2.0",
+  }
 ];

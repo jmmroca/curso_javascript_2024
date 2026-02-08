@@ -1,6 +1,6 @@
-import React from 'react'
+import BloqueCodigo from "./components/BloqueCodigo";
 
-function Variables001() {
+function Variables001({ copySnippet }) {
   return (
     <>
     <section>
@@ -32,50 +32,56 @@ function Variables001() {
       <p>La inicialización de una variable es asignar un valor a la variable</p>
       <p>Declaración de una variable global:</p>
 
-      <pre>
-        <code className="language-javascript">
-          var nombreConVar = "Juan Perez"; // Declaración e inicialización de
-          una variable
-        </code>
-      </pre>
+      <BloqueCodigo
+        copySnippet={copySnippet}
+        titulo="Declaración e inicialización de una variable con var, que es una variable global"
+        codigo={`
+          var nombreConVar = "Juan Perez"; // Declaración e inicialización de una variable
+          `}
+      />    
+
+      
       <p>para poder ver el valor de la variable en la consola</p>
-      <pre>
-        <code className="language-javascript">console.log(nombreConVar);</code>
-      </pre>
+      <BloqueCodigo
+        copySnippet={copySnippet}
+        titulo="Visualizar el valor de la variable en consola"
+        codigo={`
+          console.log(nombreConVar);
+          `}
+      />
       <p>
         Declaración e inicialización de una variable con let, que es una
         variable de bloque
       </p>
-      <pre>
-        <code id="codigo" className="language-javascript">
-          let nombreConLet = "Juan Perez"; // Declaración e inicialización de
-          una variable
-        </code>
-      </pre>
-      <pre>
-        <code id="codigo" className="language-javascript">
-         console.log(nombreConLet); // Visualizar el valor de la variable en consola
-        </code>
-      </pre>
+      <BloqueCodigo
+        copySnippet={copySnippet}
+        titulo="Declaración e inicialización de una variable con let, que es una variable de bloque"
+        codigo={`
+          let nombreConLet = "Juan Perez"; // Declaración e inicialización de una variable
+          console.log(nombreConLet); // Visualizar el valor de la variable en consola`}
+      />
       <p>
         Declaración e inicialización de una variable con const, que es una
         constante de bloque
       </p>
-      <pre>
-        <code className="language-javascript">
-          const nombreConConst = "Juan Perez"; // Declaración e inicialización
-          de una variable
-        </code>
-      </pre>
+      <BloqueCodigo
+        copySnippet={copySnippet} 
+        titulo="Declaración e inicialización de una variable con const, que es una constante de bloque"
+        codigo={`
+          const nombreConConst = "Juan Perez"; // Declaración e inicialización de una variable
+          console.log(nombreConConst); // Visualizar el valor de la variable en consola`}
+      />
       <p>
         si intentamos cambiar el valor de una constante, obtendremos un error
       </p>
-      <pre>
-        <code className ="language-javascript">
-          // nombreConConst = "Pedro Gomez"; // Esto generará un error si
-          decomentamos esta línea
-        </code>
-      </pre>
+      <BloqueCodigo
+        copySnippet={copySnippet}
+        titulo="Intentar cambiar el valor de una constante"
+        codigo={`
+          const nombreConConst = "Juan Perez"; // Declaración e inicialización de una variable
+          console.log(nombreConConst); // Visualizar el valor de la variable en consola
+          nombreConConst = "Pedro Gomez"; // Esto generará un error si descomentamos esta línea`}
+      />  
     </section>
   </>
   )
