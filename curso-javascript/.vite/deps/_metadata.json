@@ -1,0 +1,46 @@
+{
+  "hash": "960fc621",
+  "configHash": "3179d386",
+  "lockfileHash": "29a392cb",
+  "browserHash": "6c125abb",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "0b55151d",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "540f9977",
+      "needsInterop": true
+    },
+    "prismjs": {
+      "src": "../../node_modules/prismjs/prism.js",
+      "file": "prismjs.js",
+      "fileHash": "a8aa3534",
+      "needsInterop": true
+    },
+    "prismjs/components/prism-javascript": {
+      "src": "../../node_modules/prismjs/components/prism-javascript.js",
+      "file": "prismjs_components_prism-javascript.js",
+      "fileHash": "9a60e3f5",
+      "needsInterop": true
+    },
+    "lucide-react": {
+      "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
+      "file": "lucide-react.js",
+      "fileHash": "e1476a0f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-VX2H6PUQ": {
+      "file": "chunk-VX2H6PUQ.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}
