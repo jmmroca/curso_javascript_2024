@@ -1,17 +1,15 @@
-import React from 'react'
+import React from "react";
 
 function Footer() {
   return (
     <>
-        <div id='footer'>
-            <p>Desarrollado por</p>
-            <p>jmmr @ 2026</p>
-            <p>josemmroca@gmail.com</p>
+      <div id="footer">
+        <p>Desarrollado por jmmr @ 2026</p>
+        <p>josemmroca@gmail.com</p>
         (c) Todos los derechos reservados
-
-        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
