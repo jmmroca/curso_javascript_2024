@@ -9,7 +9,7 @@ function TiposDatos004({ copySnippet }) {
           <div id="image">
             <img
               className="imagen-grande"
-              src="/public/data_type_javascript.png"
+              src="./public/data_type_javascript.png"
               alt="tipos de datos javascript"
             />
           </div>

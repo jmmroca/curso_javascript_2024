@@ -9,7 +9,7 @@ function Concatenacion007({ copySnippet }) {
           <div id="image">
             <img
               className="imagen-grande"
-              src="/public/concatenacion_javaScript.png"
+              src="./public/concatenacion_javaScript.png"
               alt=""
             />
           </div>

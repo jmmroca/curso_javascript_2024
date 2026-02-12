@@ -6,7 +6,7 @@ function Variables002({ copySnippet }) {
       <section>
         <div id="title-container">
           <div id="image">
-            <img src="/public/variable.jpg" alt="" />
+            <img src="./public/variable.jpg" alt="" />
           </div>
           <div id="text">Variables II en JavaScript</div>
           <div id="logo-javascript">JS</div>

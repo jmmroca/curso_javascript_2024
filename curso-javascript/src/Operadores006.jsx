@@ -8,7 +8,7 @@ function Operadores006({ copySnippet }) {
           <div id="image">
             <img
               className="imagen-grande"
-              src="/public/Scope-en-JavaScript.jpg"
+              src="./public/operadores.png"
               alt=""
             />
           </div>

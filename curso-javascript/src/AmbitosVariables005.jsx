@@ -8,7 +8,7 @@ function AmbitosVariables005({ copySnippet }) {
           <div id="image">
             <img
               className="imagen-grande"
-              src="/public/Scope-en-JavaScript.jpg"
+              src="./public/Scope-en-JavaScript.jpg"
               alt=""
             />
           </div>
