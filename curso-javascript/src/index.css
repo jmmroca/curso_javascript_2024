@@ -22,6 +22,11 @@ p:hover {
 code {
   width: 90%;
 }
+
+#title-container{
+  display: flex;
+  justify-content: center;
+}
 #subtitle-container {
   display: flex;
   justify-content: flex-start;
@@ -37,11 +42,11 @@ code {
   margin-right: 20px;
 }
 .imagen-grande {
-  width: 500px !important;
+  width: 600px !important;
   height: auto !important;
 }
 .imagen-chica {
-  width: 100px !important;
+  width: 90px !important;
   height: auto !important;
 }
 #subtitle-container #text {
