@@ -1,21 +1,11 @@
-import React from "react";
 import BloqueCodigo from "./components/BloqueCodigo";
+import TitleContainer from "./components/TitleContainer";
 
 function Concatenacion007({ copySnippet }) {
   return (
     <>
       <section>
-        <div id="title-container">
-          <div id="image">
-            <img
-              className="imagen-grande"
-              src="./public/concatenacion_javaScript.png"
-              alt=""
-            />
-          </div>
-          <div id="text">Concatenación en JavaScript</div>
-          <div id="logo-javascript">JS</div>
-        </div>
+        <TitleContainer titulo={"Strings"} imagen={"./public/concatenacion_javascript.png"} subtitulo={"Concatenación en JavaScript"} imagenGrande={true}/>
         <p>
           En esta sección, aprenderemos sobre la forma de concatenar cadenas de texto en JavaScript.
         </p>

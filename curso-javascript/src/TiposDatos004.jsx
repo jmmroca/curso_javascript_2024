@@ -1,21 +1,11 @@
-import React from 'react'
-import BloqueCodigo from './components/BloqueCodigo';
+import BloqueCodigo from "./components/BloqueCodigo";
+import TitleContainer from "./components/TitleContainer";
 
 function TiposDatos004({ copySnippet }) {
   return (
     <>
-            <section>
-        <div id="title-container">
-          <div id="image">
-            <img
-              className="imagen-grande"
-              src="./public/data_type_javascript.png"
-              alt="tipos de datos javascript"
-            />
-          </div>
-          <div id="text">Tipos de datos en JavaScript</div>
-          <div id="logo-javascript">JS</div>
-        </div>
+      <section>
+        <TitleContainer titulo={"Datos"} imagen={"./public/data_type_javascript.png"} subtitulo={"Tipos de datos en JavaScript"} imagenGrande={true}/>
         <p>
           En esta sección, vamos a conocer los distintos tipos de datos que
           puede contener cualquiera de nuestras variables en JavaScript.
@@ -52,7 +42,9 @@ function TiposDatos004({ copySnippet }) {
               </td>
               <td>Números (enteros, decimales, NaN, Infinity)</td>
               <td>
-                <code className="language-javascript">42</code>, <code className="language-javascript">3.14</code>, <code className="language-javascript">NaN</code>
+                <code className="language-javascript">42</code>,{" "}
+                <code className="language-javascript">3.14</code>,{" "}
+                <code className="language-javascript">NaN</code>
               </td>
               <td>
                 <code className="language-javascript">"number"</code>
@@ -64,7 +56,9 @@ function TiposDatos004({ copySnippet }) {
               </td>
               <td>Números enteros muy grandes</td>
               <td>
-                <code className="language-javascript">12345678901234567890n</code>
+                <code className="language-javascript">
+                  12345678901234567890n
+                </code>
               </td>
               <td>
                 <code className="language-javascript">"bigint"</code>
@@ -76,7 +70,8 @@ function TiposDatos004({ copySnippet }) {
               </td>
               <td>Texto/cadenas</td>
               <td>
-                <code className="language-javascript">"Hola"</code>, <code className="language-javascript">'mundo'</code>
+                <code className="language-javascript">"Hola"</code>,{" "}
+                <code className="language-javascript">'mundo'</code>
               </td>
               <td>
                 <code className="language-javascript">"string"</code>
@@ -88,7 +83,8 @@ function TiposDatos004({ copySnippet }) {
               </td>
               <td>Verdadero/falso</td>
               <td>
-                <code className="language-javascript">true</code>, <code className="language-javascript">false</code>
+                <code className="language-javascript">true</code>,{" "}
+                <code className="language-javascript">false</code>
               </td>
               <td>
                 <code className="language-javascript">"boolean"</code>
@@ -137,44 +133,41 @@ function TiposDatos004({ copySnippet }) {
       <section id="estructurales">
         <h2>2. TIPO NO PRIMITIVO (1 tipo)</h2>
         <table>
-            <thead>
-                <tr>
-                    <th>Tipo</th>
-                    <th>Descripción</th>
-                    <th>Ejemplo</th>
-                    <th>typeof</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr className="no-prim">
-                    <td><code className="language-javascript">object</code></td>
-                    <td>Objetos, arrays, funciones, fechas</td>
-                    <td>
-                          <pre>
-                                <code className="language-javascript">
-          {`{}`}
-                                </code>
-                            </pre>
-                            
-                          <pre>
-                                <code className="language-javascript">
-          {`[]`}
-                                </code>
-                          </pre>
-                            
-                          <pre>
-                                <code className="language-javascript">
-         {`()=>{}`}
-                                </code>
-                          </pre>
-                    </td>
-                    <td><code className="language-javascript">"object"</code></td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+              <th>Ejemplo</th>
+              <th>typeof</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="no-prim">
+              <td>
+                <code className="language-javascript">object</code>
+              </td>
+              <td>Objetos, arrays, funciones, fechas</td>
+              <td>
+                <pre>
+                  <code className="language-javascript">{`{}`}</code>
+                </pre>
+
+                <pre>
+                  <code className="language-javascript">{`[]`}</code>
+                </pre>
+
+                <pre>
+                  <code className="language-javascript">{`()=>{}`}</code>
+                </pre>
+              </td>
+              <td>
+                <code className="language-javascript">"object"</code>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section>
-
         <BloqueCodigo
           copySnippet={copySnippet}
           titulo="1. Tipos primitivos"
@@ -205,10 +198,10 @@ function TiposDatos004({ copySnippet }) {
 
             let funcion=function(){};
             typeof funcion;       // "function"`}
-        />  
+        />
       </section>
     </>
-  )
+  );
 }
 
 export default TiposDatos004;

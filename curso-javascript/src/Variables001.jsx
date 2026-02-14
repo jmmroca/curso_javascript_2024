@@ -1,16 +1,11 @@
 import BloqueCodigo from "./components/BloqueCodigo";
+import TitleContainer from "./components/TitleContainer";
 
 function Variables001({ copySnippet }) {
   return (
     <>
     <section>
-      <div id="title-container">
-        <div id="image">
-          <img src="./public/variable.jpg" alt="" />
-        </div>
-        <div id="text">Variables en JavaScript</div>
-        <div id="logo-javascript">JS</div>
-      </div>
+      <TitleContainer titulo={"Variables"} imagen={"./public/variable.jpg"} subtitulo={"Variables en JavaScript"} imagenGrande={false}/>
       <p>
         En esta sección, aprenderemos sobre las variables en JavaScript, cómo
         declararlas, inicializarlas.

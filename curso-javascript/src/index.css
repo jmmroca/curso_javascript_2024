@@ -22,7 +22,7 @@ p:hover {
 code {
   width: 90%;
 }
-#title-container {
+#subtitle-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -30,17 +30,21 @@ code {
   margin: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#title-container #image img {
+#subtitle-container #image img {
   width: 60px;
   height: 60px;
   border-radius: 10px;
   margin-right: 20px;
 }
 .imagen-grande {
-  width: 300px !important;
+  width: 500px !important;
   height: auto !important;
 }
-#title-container #text {
+.imagen-chica {
+  width: 100px !important;
+  height: auto !important;
+}
+#subtitle-container #text {
   /* margin-left: 20px; */
   font-size: 28px;
   font-weight: bold;
@@ -48,7 +52,7 @@ code {
   margin-bottom: 10px;
   margin-right: 48%;
 }
-#title-container #logo-javascript {
+#subtitle-container #logo-javascript {
   /* margin-left: 20px; */
   font-size: 28px;
   font-weight: bold;

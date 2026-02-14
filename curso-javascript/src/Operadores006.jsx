@@ -1,20 +1,11 @@
 import BloqueCodigo from "./components/BloqueCodigo";
+import TitleContainer from "./components/TitleContainer";
 
 function Operadores006({ copySnippet }) {
   return (
     <>
       <section>
-        <div id="title-container">
-          <div id="image">
-            <img
-              className="imagen-grande"
-              src="./public/operadores.png"
-              alt=""
-            />
-          </div>
-          <div id="text">Operadores en JavaScript</div>
-          <div id="logo-javascript">JS</div>
-        </div>
+        <TitleContainer titulo={"Operadores"} imagen={"./public/operadores.png"} subtitulo={"Operadores en JavaScript"} imagenGrande={true}/>
         <p>En esta sección, aprenderemos sobre los operadores en JavaScript.</p>
       </section>
       <section>

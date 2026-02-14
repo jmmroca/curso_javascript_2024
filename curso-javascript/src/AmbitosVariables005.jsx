@@ -1,20 +1,11 @@
 import BloqueCodigo from "./components/BloqueCodigo";
+import TitleContainer from "./components/TitleContainer";
 
 function AmbitosVariables005({ copySnippet }) {
   return (
     <>
       <section>
-        <div id="title-container">
-          <div id="image">
-            <img
-              className="imagen-grande"
-              src="./public/Scope-en-JavaScript.jpg"
-              alt=""
-            />
-          </div>
-          <div id="text">Ámbitos en JavaScript</div>
-          <div id="logo-javascript">JS</div>
-        </div>
+        <TitleContainer titulo={"Variables"} imagen={"./public/scope-en-javascript.jpg"} subtitulo={"Ámbitos en variables de JavaScript"} imagenGrande={true}/>
         <p>
           En esta sección, aprenderemos sobre las variables en JavaScript, como
           saber donde usarlas por su ámbito o scope.
