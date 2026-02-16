@@ -5,9 +5,15 @@ function Concatenacion007({ copySnippet }) {
   return (
     <>
       <section>
-        <TitleContainer titulo={"Strings"} imagen={"./public/concatenacion_javascript.png"} subtitulo={"Concatenación en JavaScript"} imagenGrande={true}/>
+        <TitleContainer
+          titulo={"Strings"}
+          imagen={"./public/concatenacion_javascript.png"}
+          subtitulo={"Concatenación en JavaScript"}
+          imagenGrande={true}
+        />
         <p>
-          En esta sección, aprenderemos sobre la forma de concatenar cadenas de texto en JavaScript.
+          En esta sección, aprenderemos sobre la forma de concatenar cadenas de
+          texto en JavaScript.
         </p>
       </section>
       <section id="concatenacion-de-cadenas-en-javascript">
@@ -78,7 +84,7 @@ function Concatenacion007({ copySnippet }) {
           codigo={`
         const nombre = "Ada";   
         const puntos = 10;
-        const mensaje = "Hola, {$nombre}. Tienes {$puntos} puntos.";
+        const mensaje = \`Hola, \${nombre}. Tienes \${puntos} puntos.\`;
         console.log(mensaje); // "Hola, Ada. Tienes 10 puntos."
         `}
         />
