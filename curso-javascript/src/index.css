@@ -35,10 +35,9 @@ code {
   margin: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-#subtitle-container #image img {
+#subtitle-container img {
   width: 60px;
   height: 60px;
-  border-radius: 10px;
   margin-right: 20px;
 }
 .imagen-grande {
@@ -63,9 +62,8 @@ code {
   font-weight: bold;
   padding-top: 25px;
   padding-left: 25px;
-  width: 60px;
-  height: 60px;
-  background-color: rgb(247, 223, 30);
+  width: 85px;
+  height: 85px;
   color: black;
 }
 
