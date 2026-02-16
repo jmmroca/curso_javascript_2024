@@ -41,7 +41,8 @@ function Variables001({ copySnippet }) {
         copySnippet={copySnippet}
         titulo="Visualizar el valor de la variable en consola"
         codigo={`
-          console.log(nombreConVar);
+          var nombreConVar = "Juan Perez"; // Declaración e inicialización de una variable
+          console.log(nombreConVar); // Visualizar el valor de la variable en consola
           `}
       />
       <p>
@@ -75,7 +76,7 @@ function Variables001({ copySnippet }) {
         codigo={`
           const nombreConConst = "Juan Perez"; // Declaración e inicialización de una variable
           console.log(nombreConConst); // Visualizar el valor de la variable en consola
-          nombreConConst = "Pedro Gomez"; // Esto generará un error si descomentamos esta línea`}
+          // nombreConConst = "Pedro Gomez"; // Esto generará un error si descomentamos esta línea`}
       />  
     </section>
   </>
