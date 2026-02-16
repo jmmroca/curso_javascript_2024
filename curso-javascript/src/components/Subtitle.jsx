@@ -1,9 +1,6 @@
 import React from 'react'
 
 function Subtitle({ subtitulo }) {
-
-  // TODO: crear componente que ejecute el codigo de prueba
-  
   
   return (
     <>
