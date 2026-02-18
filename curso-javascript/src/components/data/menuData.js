@@ -1,5 +1,5 @@
 const menuData = [
-    { name: "Inicio", link: "/" },
+    { name: "Inicio", link: "/home.html" },
     { name: "Cursos", link: "#" },
     { name: "acerca de nosotros", link: "#" },
     { name: "Portafolio", link: "#" },

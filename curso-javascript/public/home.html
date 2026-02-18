@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campus Código - Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Presentación de la plataforma de cursos de programación en español: JavaScript, React, Git, GitHub, Bases de datos y más."
+  />
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+  <div class="page">
+    <img
+    src="./code_campus_logo.png"
+    alt="Logotipo CodeCampus"
+    class="logo"
+  >
+    <!-- AQUÍ IRÍA TU COMPONENTE DE MENÚ / HEADER -->
+    
+
+
+    <!-- HERO -->
+    <main class="hero">
+      <section>
+        <div class="hero-eyebrow">
+          <span>Formación práctica en programación</span>
+        </div>
+        <h1 class="hero-title">
+          Aprende <span class="hero-highlight">JavaScript, React, Git, GitHub</span><br />
+          y bases de datos con ejemplos reales.
+        </h1>
+        <p class="hero-text">
+          Plataforma de lecciones pensadas para FP y autodidactas: código ejecutable,
+          ejercicios autocorregibles y recursos para enseñar o aprender
+          desarrollo web moderno paso a paso.
+        </p>
+
+        <div class="hero-tags">
+          <span class="tag-pill">JavaScript moderno</span>
+          <span class="tag-pill">React y componentes</span>
+          <span class="tag-pill">Git & GitHub</span>
+          <span class="tag-pill">Bases de datos</span>
+          <span class="tag-pill">Buenas prácticas</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="document.getElementById('cursos').scrollIntoView({behavior: 'smooth'})">
+            Ver cursos disponibles
+          </button>
+          <button class="btn-ghost" onclick="document.getElementById('ruta').scrollIntoView({behavior: 'smooth'})">
+            Ver ruta recomendada
+          </button>
+        </div>
+
+        <p class="hero-note">
+          Empieza por la base de JavaScript y avanza hacia React, control de versiones con Git/GitHub y bases de datos SQL.
+        </p>
+      </section>
+
+      <aside class="hero-card" aria-label="Resumen de la plataforma">
+        <header class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Tu panel de aprendizaje</div>
+            <div class="hero-row-label">Cursos cortos, centrados en código.</div>
+          </div>
+          <span class="hero-card-badge">En desarrollo</span>
+        </header>
+
+        <div class="hero-grid">
+          <div>
+            <div class="hero-row-label">Rutas principales</div>
+            <div class="hero-row-value">
+              Fundamentos JS · Frontend React · Control de versiones · Bases de datos
+            </div>
+          </div>
+          <div>
+            <div class="hero-row-label">Lenguajes y herramientas</div>
+            <div class="hero-langs">
+              <span class="chip">JavaScript</span>
+              <span class="chip">React</span>
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Shell</span>
+            </div>
+          </div>
+          <div>
+            <div class="hero-row-label">Formato</div>
+            <div class="hero-row-value">
+              Lecciones breves · Ejemplos ejecutables · Ejercicios con tests
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-footer">
+          <span>Empieza por donde quieras, o sigue la ruta guiada.</span>
+          <span>Diseñado para usar también en clase.</span>
+        </div>
+      </aside>
+    </main>
+
+    <!-- COURSES SECTION -->
+    <section id="cursos" aria-labelledby="cursos-heading">
+      <h2 id="cursos-heading" class="section-title">Cursos disponibles</h2>
+      <p class="section-sub">
+        Selección inicial de cursos. Próximamente se añadirán más itinerarios y actividades prácticas.
+      </p>
+
+      <div class="courses-grid">
+        <article class="course-card">
+          <div class="course-level">Nivel inicial · 100% práctico</div>
+          <h3 class="course-title">Fundamentos de JavaScript</h3>
+          <p class="course-desc">
+            Sintaxis básica, variables, funciones, arrays y objetos. Ideal como punto de partida
+            para desarrollo web y para acompañar módulos de FP.
+          </p>
+          <div class="course-meta">
+            <span>~10 lecciones</span>
+            <span>Ejemplos ejecutables</span>
+          </div>
+          <a class="course-link" href="#js">Ver contenido</a>
+        </article>
+
+        <article class="course-card">
+          <div class="course-level">Frontend · Intermedio</div>
+          <h3 class="course-title">React desde cero</h3>
+          <p class="course-desc">
+            Componentes, estado, props y hooks básicos. Construye pequeñas aplicaciones
+            paso a paso con código que puedes editar en el navegador.
+          </p>
+          <div class="course-meta">
+            <span>~12 lecciones</span>
+            <span>JSX y hooks</span>
+          </div>
+          <a class="course-link" href="#react">Ver contenido</a>
+        </article>
+
+        <article class="course-card">
+          <div class="course-level">Herramientas del desarrollador</div>
+          <h3 class="course-title">Git y GitHub para desarrollo</h3>
+          <p class="course-desc">
+            Commits, ramas, merges, pull requests y flujo de trabajo con GitHub.
+            Pensado para proyectos pequeños y trabajo en equipo.
+          </p>
+          <div class="course-meta">
+            <span>~8 lecciones</span>
+            <span>Git CLI · GitHub</span>
+          </div>
+          <a class="course-link" href="#git">Ver contenido</a>
+        </article>
+
+        <article class="course-card">
+          <div class="course-level">Datos · Fundamental</div>
+          <h3 class="course-title">Bases de datos y SQL</h3>
+          <p class="course-desc">
+            Modelo relacional, consultas básicas, joins y diseño de esquemas orientado a aplicaciones web
+            y ejercicios típicos de FP.
+          </p>
+          <div class="course-meta">
+            <span>~10 lecciones</span>
+            <span>SQL básico</span>
+          </div>
+          <a class="course-link" href="#db">Ver contenido</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- LEARNING PATH -->
+    <section id="ruta" aria-labelledby="ruta-heading">
+      <h2 id="ruta-heading" class="section-title">Ruta recomendada de aprendizaje</h2>
+      <p class="section-sub">
+        Pensada para estudiantes de FP de informática y personas que empiezan desde cero en desarrollo web.
+      </p>
+      <ol class="path-list">
+        <li><strong>Fundamentos de JavaScript</strong>: sintaxis, tipos, control de flujo, funciones.</li>
+        <li><strong>Git y GitHub</strong>: control de versiones para tus ejercicios y proyectos.</li>
+        <li><strong>React desde cero</strong>: componentes, estado y composición de interfaces.</li>
+        <li><strong>Bases de datos y SQL</strong>: almacenar y consultar información para tus apps.</li>
+      </ol>
+    </section>
+
+    <!-- ABOUT / FOOTER -->
+    <section id="sobre-mi" aria-labelledby="sobre-heading">
+      <h2 id="sobre-heading" class="section-title">Sobre este proyecto</h2>
+      <p class="section-sub">
+        Esta web nace con la idea de recopilar lecciones, ejemplos y ejercicios reutilizables
+        sobre programación y herramientas modernas, con foco en la enseñanza práctica y en el contexto de FP.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Campus Código. Todos los derechos reservados.</span>
+      <div class="footer-links">
+        <a href="#cursos">Cursos</a>
+        <a href="#ruta">Ruta</a>
+        <a href="#sobre-mi">Contacto</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
