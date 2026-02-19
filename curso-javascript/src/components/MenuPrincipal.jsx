@@ -1,4 +1,5 @@
 // MenuPrincipal.jsx
+import { Link } from "react-router-dom";
 import menuData from "./data/menuData";
 
 const MenuPrincipal = () => {
@@ -7,9 +8,9 @@ const MenuPrincipal = () => {
       <ul className="menu-principal-lista">
         {menuData.map((item) => (
           <li key={item.name} className="menu-principal-item">
-            <a href={item.link} className="menu-principal-enlace">
+            <Link to={item.link} className="menu-principal-enlace">
               {item.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
