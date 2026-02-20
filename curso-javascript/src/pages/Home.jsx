@@ -48,7 +48,7 @@ function Home() {
                 className="btn-primary"
                 onClick={() =>
                   document
-                    .getElementById("/curso-javascript/cursos")
+                    .getElementById("/cursos")
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >

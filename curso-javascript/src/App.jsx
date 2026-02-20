@@ -15,12 +15,10 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/home" element={<Home />} />
       <Route path="/cursos" element={<Cursos />} />
-      <Route path="/curso-javascript/detalle-curso/javascript" element={<DetallesCursoJavascript />} />
-      <Route path="/curso-javascript/curso/javascript" element={<CursoJavascript />} />
+      <Route path="/detalle-curso/javascript" element={<DetallesCursoJavascript />} />
+      <Route path="/curso/javascript" element={<CursoJavascript />} />
 
-      <Route path="/curso-javascript/home" element={<Home />} />
-      <Route path="/curso-javascript/cursos" element={<Cursos />} />
-      <Route path="/curso-javascript/variables" element={<Variables001 />} />
+      <Route path="/variables" element={<Variables001 />} />
 
       <Route path="*" element={<Home />} />
     </Routes>

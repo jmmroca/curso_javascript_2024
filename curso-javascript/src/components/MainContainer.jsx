@@ -11,7 +11,6 @@ function MainContainer({ paginaActual }) {
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    // Prism.highlightAll();
     return () => Prism.highlightAll();
   }, [paginaActual]);
 

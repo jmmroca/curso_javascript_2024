@@ -75,7 +75,7 @@ export default function Cursos() {
                 <h2 style={{ margin: 0 }}>{curso.nombre}</h2>
                 <p style={{ marginTop: "0.5rem" }}>{curso.descripcion}</p>
                 <a
-                  href={`/curso-javascript/detalle-curso/${curso.nombre.toLowerCase().replace(" ", "-")}`}
+                  href={`/detalle-curso/${curso.nombre.toLowerCase().replace(" ", "-")}`}
                   className="btn-primary"
                 >
                   Ver detalles
