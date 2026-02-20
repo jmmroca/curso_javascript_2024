@@ -1,15 +1,21 @@
+import { useEffect } from "react";
+import LogoHeader from "../components/LogoHeader";
+import MenuPrincipal from "../components/MenuPrincipal";
+
 // src/pages/Home.jsx
 function Home() {
+  useEffect(() => {
+    const yearElement = document.getElementById("year");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  }, []);
   return (
     <>
       <div className="page">
-        <img
-          src="./code_campus_logo.png"
-          alt="Logotipo CodeCampus"
-          className="logo"
-        />
+        <LogoHeader />
         {/* AQUÍ IRÍA TU COMPONENTE DE MENÚ / HEADER */}
-
+        <MenuPrincipal />
         {/* HERO */}
         <main className="hero">
           <section>
@@ -255,8 +261,6 @@ function Home() {
           </div>
         </footer>
       </div>
-
-      {/* {{document.getElementById("year").textContent = new Date().getFullYear()}} */}
     </>
   );
 }
