@@ -1,11 +1,11 @@
-import React from "react";
+import codeCampusLogo from './assets/code_campus_logo.png';
 
 function LogoHeader() {
   return (
     <>
       <div className="logo-header">
         <img
-          src="/code_campus_logo.png"
+          src={codeCampusLogo}
           alt="Logotipo CodeCampus"
           className="logo"
         />

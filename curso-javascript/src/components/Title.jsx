@@ -1,5 +1,3 @@
-import React from 'react'
-
 function Title( { titulo, imagen, imagenGrande } ) {
   return (
     <>

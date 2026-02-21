@@ -1,4 +1,4 @@
-import React from 'react'
+import logoJs from './assets/logo-javascript.png';
 
 function Subtitle({ subtitulo }) {
   
@@ -6,7 +6,7 @@ function Subtitle({ subtitulo }) {
     <>
         <div id="subtitle-container">
           <div id="text">{subtitulo}</div>
-          <div id="logo-javascript"><img src="/logo-javascript.png" alt="logo-javascript" /></div>
+          <div id="logo-javascript"><img src={logoJs} alt="logo-javascript" /></div>
         </div>
     </>
   )
