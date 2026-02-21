@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]          # ← tu rama
+  workflow_dispatch:
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+env:
+  PROJECT_DIR: nuevoJavascript/curso-javascript
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Ejecuta TODOS los `run:` dentro de tu subcarpeta con package.json
+    defaults:
+      run:
+        working-directory: ${{ env.PROJECT_DIR }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Paso de diagnóstico (puedes retirarlo cuando todo funcione)
+      - name: Debug PWD and files
+        run: |
+          echo "PWD:"
+          pwd
+          echo "List project dir:"
+          ls -la
+          echo "package.json (preview):"
+          sed -n '1,120p' package.json || true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # Usa npm ci si tienes package-lock.json; si no, cambia a npm install
+      - name: Install dependencies
+        run: npm ci
+
+      # ELIGE UNA opción de build:
+      # (A) Si NO pusiste `base` en vite.config.js (recomendado para Pages):
+      # - name: Build (dynamic base for GitHub Pages)
+      #   run: npm run build -- --base=/${{ github.event.repository.name }}/
+      #
+      # (B) Si YA definiste `base` en vite.config.js (p.ej. "/curso_javascript_2024/"):
+      - name: Build
+        run: npm run build
+
+      # Sube el artefacto 'dist' de TU subcarpeta (ruta relativa a la raíz del repo)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.PROJECT_DIR }}/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
