@@ -5,22 +5,26 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# Evita carreras si haces varios push seguidos
 concurrency:
   group: pages
   cancel-in-progress: true
 
+# Permisos mínimos para Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
 env:
-  PROJECT_DIR: /   # <-- tu carpeta real
+  # 🔧 AJUSTA AQUÍ si cambia la ruta del proyecto dentro del repo
+  PROJECT_DIR: nuevoJavascript/curso-javascript
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    # Hace que TODOS los steps con `run:` se ejecuten en PROJECT_DIR
     defaults:
       run:
         working-directory: ${{ env.PROJECT_DIR }}
@@ -35,19 +39,26 @@ jobs:
           node-version: 20
           cache: npm
 
-      # Si tienes package-lock.json:
+      # ⛳ Usa 'npm ci' si existe package-lock.json en PROJECT_DIR
+      #    Si no existe, cambia a 'npm install'
       - name: Install dependencies
         run: npm ci
 
-      # Si NO tienes package-lock.json, usa: npm install
+      # ⬇️ ELIGE UNA de estas dos opciones de Build:
 
+      # (A) Si NO tienes 'base' en vite.config.js y publicas en /<repo>/ :
+      # - name: Build (dynamic base for GitHub Pages)
+      #   run: npm run build -- --base=/${{ github.event.repository.name }}/
+
+      # (B) Si YA definiste base en vite.config.js (p.ej. base: "/curso_javascript_2024/"):
       - name: Build
         run: npm run build
 
-      # Muy importante: esta ruta es relativa AL REPO, NO al working-directory
+      # Sube el artefacto desde el DIST del subdirectorio
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # OJO: 'path' es relativo a la raíz del repo, no a working-directory
           path: ${{ env.PROJECT_DIR }}/dist
 
   deploy:
@@ -56,7 +67,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
