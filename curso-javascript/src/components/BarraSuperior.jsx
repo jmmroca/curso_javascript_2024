@@ -12,7 +12,6 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
         onClick={() => setPaginaActual(paginaActual > 1 ? paginaActual - 1 : 1)}
       >
         <SquareArrowLeft />
-        Anterior
       </button>
       <p>
         {paginaActual} de {paginaMaxima}
@@ -27,7 +26,6 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
         }
       >
         <SquareArrowRight />
-        Siguiente
       </button>
     </div>
   );
