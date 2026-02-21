@@ -15,7 +15,7 @@ permissions:
   id-token: write
 
 env:
-  PROJECT_DIR: nuevoJavascript/   # <-- tu carpeta real
+  PROJECT_DIR: /   # <-- tu carpeta real
 
 jobs:
   build:
