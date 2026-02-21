@@ -42,15 +42,14 @@ jobs:
       - name: Build with correct base path
         run: npm run build -- --base=/${{ github.event.repository.name }}/
 
-      - name: Debug build output
+      - name: Verify build output
         run: |
-          echo "=== Build completed ==="
-          echo "Contents of dist:"
+          echo "=== Build output ==="
           ls -la dist/
           echo "=== CSS files ==="
           find dist -name "*.css" | head -5
-          echo "=== index.html preview ==="
-          cat dist/index.html | grep -A 3 -B 3 "href=\|src="
+          echo "=== index.html ==="
+          cat dist/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
