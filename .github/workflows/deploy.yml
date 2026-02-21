@@ -18,7 +18,7 @@ permissions:
 
 env:
   # 🔧 AJUSTA AQUÍ si cambia la ruta del proyecto dentro del repo
-  PROJECT_DIR: nuevoJavascript/curso-javascript
+  PROJECT_DIR: /
 
 jobs:
   build:
