@@ -18,7 +18,11 @@ permissions:
 
 # Subcarpeta del proyecto dentro del repo
 env:
+<<<<<<< HEAD
   PROJECT_DIR: ./curso-javascript
+=======
+  PROJECT_DIR: /curso-javascript
+>>>>>>> 40b4bedeae237c09af5ba08c31155fa141a058db
 
 jobs:
   build:
