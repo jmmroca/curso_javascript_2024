@@ -1,6 +1,7 @@
 // src/pages/Cursos.jsx
 import { useMemo } from "react";
 import PageShell from "../components/PageShell";
+import { Link } from "react-router-dom";
 
 /** Slug seguro para URLs a partir del nombre del curso */
 function toSlug(text) {
@@ -83,13 +84,13 @@ export default function Cursos() {
                     </h2>
                     <p className="mb-3">{curso.descripcion}</p>
                     <p>
-                      <a
-                        href={`/detalle-curso/${slug}`}
+                      <Link
+                        to={`/detalle-curso/${slug}`}
                         className="text-accent hover:text-accent-hover underline-offset-4 hover:underline"
                         aria-label={`Ver detalles del curso ${curso.nombre}`}
                       >
                         Ver detalles del curso
-                      </a>
+                      </Link>
                     </p>
                   </section>
                 );
