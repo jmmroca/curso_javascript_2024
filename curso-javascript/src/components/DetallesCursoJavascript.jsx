@@ -1,4 +1,5 @@
 // src/pages/DetallesCursoJavascript.jsx
+import { Link } from "react-router-dom";
 import PageShell from "../components/PageShell";
 
 export default function DetallesCursoJavascript() {
@@ -78,15 +79,13 @@ export default function DetallesCursoJavascript() {
                   </h3>
                   <p className="mb-3">{p.resumen}</p>
                   <p>
-                    <a
-                      href={`${p.enlace}${p.ancla}`}
-                      target="_blank"
-                      rel="noreferrer noopener"
+                    <Link
+                      to="/curso/javascript"
                       className="text-accent hover:text-accent-hover underline-offset-4 hover:underline"
-                      aria-label={`Ver contenido de ${p.titulo} en es.javascript.info`}
                     >
-                      Ver contenido en es.javascript.info
-                    </a>
+                      Ver curso Javascript
+                    </Link>
+                    <span className="mx-2 text-textc-muted">|</span>
                   </p>
                 </section>
               ))}
