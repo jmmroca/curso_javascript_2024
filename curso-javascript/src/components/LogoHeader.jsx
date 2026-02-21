@@ -5,7 +5,7 @@ function LogoHeader() {
     <>
       <div className="logo-header">
         <img
-          src="public/code_campus_logo.png"
+          src="/code_campus_logo.png"
           alt="Logotipo CodeCampus"
           className="logo"
         />

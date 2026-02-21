@@ -6,7 +6,7 @@ function Subtitle({ subtitulo }) {
     <>
         <div id="subtitle-container">
           <div id="text">{subtitulo}</div>
-          <div id="logo-javascript"><img src="./public/logo-javascript.png" alt="logo-javascript" /></div>
+          <div id="logo-javascript"><img src="/logo-javascript.png" alt="logo-javascript" /></div>
         </div>
     </>
   )

@@ -6,7 +6,7 @@ function Variables() {
       <section>
         <div id="title-container">
           <div id="image">
-            <img src="../public/variable.jpg" alt="variable" />
+            <img src="/variable.jpg" alt="variable" />
           </div>
           <div id="text">Variables en JavaScript</div>
           <div id="logo-javascript">JS</div>
