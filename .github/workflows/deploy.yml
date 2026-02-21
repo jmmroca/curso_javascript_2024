@@ -5,42 +5,50 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# Recomendado por GitHub Pages para evitar carreras entre ejecuciones
 concurrency:
   group: pages
   cancel-in-progress: true
 
-# Permisos mínimos para pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
+env:
+  PROJECT_DIR: nuevoJavascript/curso-javascript   # <-- tu carpeta real
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ${{ env.PROJECT_DIR }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
-      - name: Install deps
+      # Si tienes package-lock.json:
+      - name: Install dependencies
         run: npm ci
 
-      # Si usas Vite y el repo se sirve en /<repo>, define base en build
-      # Elimina --base si ya lo tienes en vite.config.js
-      - name: Build
-        run: npm run build -- --base=/${{ github.event.repository.name }}/
+      # Si NO tienes package-lock.json, usa: npm install
 
-      # Sube la carpeta 'dist' como artefacto para Pages
+      - name: Build
+        run: npm run build
+
+      # Muy importante: esta ruta es relativa AL REPO, NO al working-directory
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: ${{ env.PROJECT_DIR }}/dist
 
   deploy:
     needs: build
@@ -49,6 +57,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
