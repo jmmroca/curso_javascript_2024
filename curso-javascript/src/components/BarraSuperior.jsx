@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SquareArrowLeft  , SquareArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { dataCurso } from "./data/dataCurso";
 
 function BarraSuperior({ paginaActual, setPaginaActual }) {
@@ -11,7 +12,7 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
         className="btn btn-primary"
         onClick={() => setPaginaActual(paginaActual > 1 ? paginaActual - 1 : 1)}
       >
-        <SquareArrowLeft />
+        <ArrowLeft />
       </button>
       <p>
         {paginaActual} de {paginaMaxima}
@@ -25,7 +26,7 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
           )
         }
       >
-        <SquareArrowRight />
+        <ArrowRight />
       </button>
     </div>
   );
