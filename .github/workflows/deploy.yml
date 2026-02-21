@@ -2,8 +2,15 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "react-web" ]
+    branches: [ main ]
+  workflow_dispatch:
 
+# Recomendado por GitHub Pages para evitar carreras entre ejecuciones
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+# Permisos mínimos para pages
 permissions:
   contents: read
   pages: write
@@ -16,26 +23,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
-      - name: Install dependencies
+      - name: Install deps
         run: npm ci
 
+      # Si usas Vite y el repo se sirve en /<repo>, define base en build
+      # Elimina --base si ya lo tienes en vite.config.js
       - name: Build
-        run: npm run build
+        run: npm run build -- --base=/${{ github.event.repository.name }}/
 
+      # Sube la carpeta 'dist' como artefacto para Pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: dist
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
