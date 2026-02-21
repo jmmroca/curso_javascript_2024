@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]          # ← tu rama
+    branches: [ "main" ]
   workflow_dispatch:
 
 concurrency:
@@ -15,13 +15,13 @@ permissions:
   id-token: write
 
 env:
-  PROJECT_DIR: nuevoJavascript/curso-javascript
+  PROJECT_DIR: curso-javascript  # ← Solo el nombre de la carpeta, sin rutas complejas
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Ejecuta TODOS los `run:` dentro de tu subcarpeta con package.json
+    # Esto hace que TODOS los comandos 'run:' se ejecuten dentro de curso-javascript/
     defaults:
       run:
         working-directory: ${{ env.PROJECT_DIR }}
@@ -30,39 +30,37 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Paso de diagnóstico (puedes retirarlo cuando todo funcione)
-      - name: Debug PWD and files
+      # PASO DE VERIFICACIÓN (opcional, puedes eliminarlo después)
+      - name: Verify files
         run: |
-          echo "PWD:"
+          echo "Current directory:"
           pwd
-          echo "List project dir:"
+          echo "Files in current directory:"
           ls -la
-          echo "package.json (preview):"
-          sed -n '1,120p' package.json || true
+          echo "package.json exists?"
+          ls -la package.json || echo "package.json NOT found!"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          # Importante: especificar dónde está el package-lock.json para el cache
           cache: npm
+          cache-dependency-path: ${{ env.PROJECT_DIR }}/package-lock.json
 
-      # Usa npm ci si tienes package-lock.json; si no, cambia a npm install
       - name: Install dependencies
         run: npm ci
+        # Si no tienes package-lock.json, cambia a: run: npm install
 
-      # ELIGE UNA opción de build:
-      # (A) Si NO pusiste `base` en vite.config.js (recomendado para Pages):
-      # - name: Build (dynamic base for GitHub Pages)
-      #   run: npm run build -- --base=/${{ github.event.repository.name }}/
-      #
-      # (B) Si YA definiste `base` en vite.config.js (p.ej. "/curso_javascript_2024/"):
       - name: Build
         run: npm run build
+        # Si necesitas configurar el base path para GitHub Pages:
+        # run: npm run build -- --base=/${{ github.event.repository.name }}/
 
-      # Sube el artefacto 'dist' de TU subcarpeta (ruta relativa a la raíz del repo)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Importante: la ruta desde la raíz del repositorio
           path: ${{ env.PROJECT_DIR }}/dist
 
   deploy:
