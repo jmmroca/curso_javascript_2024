@@ -3,7 +3,7 @@ import MenuPrincipal from "../components/MenuPrincipal";
 import BarraSuperior from "../components/BarraSuperior";
 import MainContainer from "../components/MainContainer";
 import Variable from "../components/Variable";
-import BotonMostarContainer from "../components/BotonMostarContainer";
+// import BotonMostarContainer from "../components/BotonMostarContainer";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import LogoHeader from "../components/LogoHeader";
@@ -19,10 +19,10 @@ function CursoJavascript() {
           paginaActual={paginaActual}
           setPaginaActual={setPaginaActual}
         />
-        <BotonMostarContainer
+        {/* <BotonMostarContainer
           mostrarContainer={mostrarContainer}
           setMostrarContainer={setMostrarContainer}
-        />
+        /> */}
         {mostrarContainer ? (
           <MainContainer paginaActual={paginaActual} />
         ) : (
