@@ -43,7 +43,7 @@ export default function DetallesCursoJavascript() {
       <div
         className="
         min-h-screen text-textc antialiased
-        bg-[radial-gradient(1200px_700px_at_15%_0%,#0e1620_0%,theme(colors.bg.DEFAULT)_60%)]
+        bg-[radial-gradient(1200px_700px_at_15%_0%,theme(colors.bg.backdrop)_0%,theme(colors.bg.DEFAULT)_60%)]
       "
       >
         {/* Contenido */}

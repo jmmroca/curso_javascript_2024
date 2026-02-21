@@ -6,7 +6,7 @@ export default function PageShell({ children }) {
   return (
     <div className="
       min-h-screen text-textc antialiased
-      bg-[radial-gradient(1200px_700px_at_15%_0%,#0e1620_0%,theme(colors.bg.DEFAULT)_60%)]
+      bg-[radial-gradient(1200px_700px_at_15%_0%,theme(colors.bg.backdrop)_0%,theme(colors.bg.DEFAULT)_60%)]
     ">
       <header className="px-5 md:px-6 pt-4">
         <div className="max-w-shell mx-auto flex items-center justify-between gap-4">
