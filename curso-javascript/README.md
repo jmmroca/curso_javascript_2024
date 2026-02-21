@@ -19,3 +19,4 @@ Páginas explicando las variables:
 
     7. Concatenación
     
+## Generar más cursos: GIT, GITHUB, REACT, SQL, BBDD
