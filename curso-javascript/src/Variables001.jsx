@@ -1,6 +1,6 @@
 import BloqueCodigo from "./components/BloqueCodigo";
 import TitleContainer from "./components/TitleContainer";
-import variable from '../assets/variable.jpg'
+import variable from "./assets/variable.png";
 
 function Variables001({ copySnippet }) {
   return (
