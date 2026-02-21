@@ -1,5 +1,5 @@
-import React from "react";
 import { useState } from "react";
+import { SquareArrowLeft  , SquareArrowRight } from 'lucide-react';
 import { dataCurso } from "./data/dataCurso";
 
 function BarraSuperior({ paginaActual, setPaginaActual }) {
@@ -11,6 +11,7 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
         className="btn btn-primary"
         onClick={() => setPaginaActual(paginaActual > 1 ? paginaActual - 1 : 1)}
       >
+        <SquareArrowLeft />
         Anterior
       </button>
       <p>
@@ -25,6 +26,7 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
           )
         }
       >
+        <SquareArrowRight />
         Siguiente
       </button>
     </div>
