@@ -4,8 +4,8 @@ import CursoJavascript from "./pages/CursoJavascript";
 import Home from "./pages/Home";
 import Cursos from "./pages/Cursos";
 
-import '../src/css/app.css';
-import '../src/css/home.css';
+import './src/css/app.css';
+import './src/css/home.css';
 
 import Variables001 from "./Variables001";
 import DetallesCursoJavascript from "./components/DetallesCursoJavascript";
