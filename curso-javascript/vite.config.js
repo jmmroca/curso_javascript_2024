@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/curso-javascript/',
+  // base: '/curso-javascript/',
   server: {
     port: 5173,
   },
