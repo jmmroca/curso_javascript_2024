@@ -1,11 +1,11 @@
-import codeCampusLogo from './assets/code_campus_logo.png';
+import logo from '../assets/code_campus_logo.png'
 
 function LogoHeader() {
   return (
     <>
       <div className="logo-header">
         <img
-          src={codeCampusLogo}
+          src={logo}
           alt="Logotipo CodeCampus"
           className="logo"
         />

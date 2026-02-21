@@ -1,4 +1,4 @@
-import logoJs from './assets/logo-javascript.png';
+import logoJs from '../assets/logo-javascript.png';
 
 function Subtitle({ subtitulo }) {
   
