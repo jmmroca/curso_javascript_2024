@@ -2,10 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "main" ]          # ← tu rama real
   workflow_dispatch:
 
-# Evita carreras si haces varios push seguidos
+# Evita carreras entre ejecuciones (recomendación de Pages)
 concurrency:
   group: pages
   cancel-in-progress: true
@@ -16,15 +16,15 @@ permissions:
   pages: write
   id-token: write
 
+# Subcarpeta del proyecto dentro del repo
 env:
-  # 🔧 AJUSTA AQUÍ si cambia la ruta del proyecto dentro del repo
-  PROJECT_DIR: /
+  PROJECT_DIR: nuevoJavascript/curso-javascript
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    # Hace que TODOS los steps con `run:` se ejecuten en PROJECT_DIR
+    # Hace que TODOS los steps con `run:` se ejecuten dentro de PROJECT_DIR
     defaults:
       run:
         working-directory: ${{ env.PROJECT_DIR }}
@@ -33,20 +33,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Paso de depuración (temporal) para confirmar la carpeta de trabajo
+      - name: Debug PWD and files
+        run: |
+          echo "PWD (debe ser nuevoJavascript/curso-javascript):"
+          pwd
+          echo "Contenido del proyecto:"
+          ls -la
+          echo "Vista previa de package.json:"
+          head -n 40 package.json || true
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # ⛳ Usa 'npm ci' si existe package-lock.json en PROJECT_DIR
-      #    Si no existe, cambia a 'npm install'
+      # Usa 'npm ci' SOLO si existe package-lock.json en PROJECT_DIR.
+      # Si no lo tienes, cambia esta línea a: npm install
       - name: Install dependencies
         run: npm ci
 
-      # ⬇️ ELIGE UNA de estas dos opciones de Build:
+      # ELIGE UNA de estas dos opciones de build:
 
-      # (A) Si NO tienes 'base' en vite.config.js y publicas en /<repo>/ :
+      # (A) Si NO tienes 'base' en vite.config.js y vas a publicar bajo /<repo>/ :
       # - name: Build (dynamic base for GitHub Pages)
       #   run: npm run build -- --base=/${{ github.event.repository.name }}/
 
@@ -54,11 +64,11 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Sube el artefacto desde el DIST del subdirectorio
+      # Sube el artefacto desde el dist del subdirectorio del proyecto
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # OJO: 'path' es relativo a la raíz del repo, no a working-directory
+          # ¡OJO! 'path' es relativo a la RAÍZ del repo (no al working-directory)
           path: ${{ env.PROJECT_DIR }}/dist
 
   deploy:
@@ -67,7 +77,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
