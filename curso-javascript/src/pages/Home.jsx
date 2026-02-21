@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import LogoHeader from "../components/LogoHeader";
-import MenuPrincipal from "../components/MenuPrincipal";
+import PageShell from "../components/PageShell";
 
 // src/pages/Home.jsx
 function Home() {
@@ -11,11 +10,9 @@ function Home() {
     }
   }, []);
   return (
-    <>
+    <PageShell>
       <div className="page">
-        <LogoHeader />
-        {/* AQUÍ IRÍA TU COMPONENTE DE MENÚ / HEADER */}
-        <MenuPrincipal />
+        
         {/* HERO */}
         <main className="hero">
           <section>
@@ -45,10 +42,10 @@ function Home() {
 
             <div className="hero-actions">
               <button
-                className="btn-primary"
+                className="btn-ghost"
                 onClick={() =>
                   document
-                    .getElementById("/cursos")
+                    .getElementById("cursos")
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >
@@ -261,7 +258,7 @@ function Home() {
           </div>
         </footer>
       </div>
-    </>
+    </PageShell>
   );
 }
 

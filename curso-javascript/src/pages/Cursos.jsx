@@ -1,99 +1,107 @@
-// Cursos.jsx
-import React, { useEffect } from "react";
-import MenuPrincipal from "../components/MenuPrincipal";
-import LogoHeader from "../components/LogoHeader";
+// src/pages/Cursos.jsx
+import { useMemo } from "react";
+import PageShell from "../components/PageShell";
+
+/** Slug seguro para URLs a partir del nombre del curso */
+function toSlug(text) {
+  return text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // quita acentos
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 export default function Cursos() {
-  const cursos = [
-    {
-      nombre: "JavaScript",
-      descripcion:
-        "Aprende los fundamentos del lenguaje más usado en el desarrollo web: variables, funciones, bucles, arrays, objetos y programación moderna con ES6+.",
-    },
-    {
-      nombre: "React",
-      descripcion:
-        "Curso completo de React: componentes, props, estado, hooks, efectos, enrutado, gestión de estado y buenas prácticas en aplicaciones modernas.",
-    },
-    {
-      nombre: "Git",
-      descripcion:
-        "Domina Git desde cero: control de versiones, commits, ramas (branches), fusiones (merge), resolución de conflictos y flujos profesionales.",
-    },
-    {
-      nombre: "GitHub",
-      descripcion:
-        "Aprende a trabajar con repositorios remotos, pull requests, issues, proyectos colaborativos, GitHub Actions y automatización.",
-    },
-    {
-      nombre: "SQL",
-      descripcion:
-        "Curso dedicado al lenguaje SQL: consultas, filtros, joins, subconsultas, funciones agregadas, diseño de tablas y optimización básica.",
-    },
-    {
-      nombre: "Shell",
-      descripcion:
-        "Introducción a la terminal y Shell scripting: comandos básicos, navegación del sistema, redirecciones, pipes y automatización de tareas.",
-    },
-    {
-      nombre: "Bases de datos",
-      descripcion:
-        "Aprende a diseñar, crear y administrar bases de datos relacionales y no relacionales, índices, relaciones, normalización y modelado de datos.",
-    },
-  ];
-
-  useEffect(() => {
-    const yearElement = document.getElementById("year");
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  }, []);
+  const cursos = useMemo(
+    () => [
+      {
+        nombre: "JavaScript",
+        descripcion:
+          "Aprende los fundamentos del lenguaje más usado en el desarrollo web: variables, funciones, bucles, arrays, objetos y programación moderna con ES6+.",
+      },
+      {
+        nombre: "React",
+        descripcion:
+          "Curso completo de React: componentes, props, estado, hooks, efectos, enrutado, gestión de estado y buenas prácticas en aplicaciones modernas.",
+      },
+      {
+        nombre: "Git",
+        descripcion:
+          "Domina Git desde cero: control de versiones, commits, ramas (branches), merges, resolución de conflictos y flujos profesionales.",
+      },
+      {
+        nombre: "GitHub",
+        descripcion:
+          "Repos remotos, pull requests, issues, proyectos colaborativos, GitHub Actions y automatización.",
+      },
+      {
+        nombre: "SQL",
+        descripcion:
+          "Consultas, filtros, joins, subconsultas, funciones agregadas, diseño de tablas y optimización básica.",
+      },
+      {
+        nombre: "Shell",
+        descripcion:
+          "Terminal y Shell scripting: comandos básicos, navegación, redirecciones, pipes y automatización.",
+      },
+      {
+        nombre: "Bases de datos",
+        descripcion:
+          "Modelado relacional y no relacional, índices, relaciones, normalización y diseño orientado a apps.",
+      },
+    ],
+    [],
+  );
 
   return (
-    <>
-      <div className="page">
-        <LogoHeader />
-        <MenuPrincipal />
-        <section style={{ padding: "2rem" }}>
-          <h1>Cursos que impartimos</h1>
-          <p>
-            Estos son los cursos disponibles actualmente. Cada uno está diseñado
-            para ayudarte a dominar las tecnologías más demandadas.
-          </p>
+    <PageShell>
+      <div
+        className="
+        min-h-screen text-textc antialiased
+        bg-[radial-gradient(1200px_700px_at_15%_0%,#0e1620_0%,theme(colors.bg.DEFAULT)_60%)]
+      "
+      >
+        {/* Contenido */}
+        <main className="px-5 py-8 md:px-6 md:py-12">
+          <div className="max-w-content mx-auto">
+            <h1 className="font-bold tracking-[0.2px] text-[28px] md:text-h1 mb-4">
+              Cursos que impartimos
+            </h1>
+            <p className="text-textc-muted font-medium -mt-1 mb-6">
+              Selección inicial de cursos. Próximamente añadiremos más
+              itinerarios y actividades prácticas.
+            </p>
 
-          <ul style={{ listStyle: "none", padding: 0 }}>
-            {cursos.map((curso) => (
-              <li
-                key={curso.nombre}
-                style={{
-                  marginBottom: "1.5rem",
-                  padding: "1rem",
-                  borderRadius: "8px",
-                  background: "rgba(15, 23, 42, 0.96)",
-                }}
-              >
-                <h2 style={{ margin: 0 }}>{curso.nombre}</h2>
-                <p style={{ marginTop: "0.5rem" }}>{curso.descripcion}</p>
-                <a
-                  href={`/detalle-curso/${curso.nombre.toLowerCase().replace(" ", "-")}`}
-                  className="btn-primary"
-                >
-                  Ver detalles
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-        <footer className="footer">
-          <span>
-            © <span id="year"></span> Campus Código. Todos los derechos
-            reservados.
-          </span>
-          <div className="footer-links">
-            <a href="#sobre-mi">Contacto</a>
+            <div className="divide-y divide-divider">
+              {cursos.map((curso) => {
+                const slug = toSlug(curso.nombre);
+                return (
+                  <section key={slug} className="py-6 first:pt-0">
+                    <h2 className="font-bold text-[22px] md:text-h2 leading-snug mb-2">
+                      {curso.nombre}
+                    </h2>
+                    <p className="mb-3">{curso.descripcion}</p>
+                    <p>
+                      <a
+                        href={`/detalle-curso/${slug}`}
+                        className="text-accent hover:text-accent-hover underline-offset-4 hover:underline"
+                        aria-label={`Ver detalles del curso ${curso.nombre}`}
+                      >
+                        Ver detalles del curso
+                      </a>
+                    </p>
+                  </section>
+                );
+              })}
+            </div>
+
+            <p className="text-textc-muted mt-6">
+              ¿Buscas otro contenido? Contáctanos para próximas convocatorias.
+            </p>
           </div>
-        </footer>
+        </main>
       </div>
-    </>
+    </PageShell>
   );
 }
