@@ -1,5 +1,6 @@
 import BloqueCodigo from "./components/BloqueCodigo";
 import TitleContainer from "./components/TitleContainer";
+import concatenacion from "./assets/concatenacion_javascript.png";
 
 function Concatenacion007({ copySnippet }) {
   return (
@@ -7,7 +8,7 @@ function Concatenacion007({ copySnippet }) {
       <section>
         <TitleContainer
           titulo={"Strings"}
-          imagen={"./public/concatenacion_javascript.png"}
+          imagen={concatenacion}
           subtitulo={"Concatenación en JavaScript"}
           imagenGrande={true}
         />

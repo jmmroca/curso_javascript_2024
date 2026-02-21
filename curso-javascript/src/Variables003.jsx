@@ -1,11 +1,12 @@
 import BloqueCodigo from "./components/BloqueCodigo";
 import TitleContainer from "./components/TitleContainer";
+import variable from "./assets/variable.jpg";
 
 function Variables003({ copySnippet }) {
   return (
     <>
       <section>
-      <TitleContainer titulo={"Variables"} imagen={"./public/variable.jpg"} subtitulo={"Variables III en JavaScript"} imagenGrande={false}/>
+      <TitleContainer titulo={"Variables"} imagen={variable} subtitulo={"Variables III en JavaScript"} imagenGrande={false}/>
         <p>
           En esta sección, vamos a aprender algo más sobre las variables en
           JavaScript, sobre como seguir las buenas prácticas para nombrarlas.

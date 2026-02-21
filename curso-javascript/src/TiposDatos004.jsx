@@ -1,11 +1,12 @@
 import BloqueCodigo from "./components/BloqueCodigo";
 import TitleContainer from "./components/TitleContainer";
+import dataTypeJs from "./assets/data_type_javascript.png";
 
 function TiposDatos004({ copySnippet }) {
   return (
     <>
       <section>
-        <TitleContainer titulo={"Datos"} imagen={"./public/data_type_javascript.png"} subtitulo={"Tipos de datos en JavaScript"} imagenGrande={true}/>
+        <TitleContainer titulo={"Datos"} imagen={dataTypeJs} subtitulo={"Tipos de datos en JavaScript"} imagenGrande={true}/>
         <p>
           En esta sección, vamos a conocer los distintos tipos de datos que
           puede contener cualquiera de nuestras variables en JavaScript.
