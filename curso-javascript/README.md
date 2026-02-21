@@ -11,5 +11,11 @@ Páginas explicando las variables:
     
     3. Y en la tercera, las buenas prácticas al utilizar variables.
 
-    4. Tipos de datos Javascript
+    4. Tipos de datos Javascript.
+
+    5. Ámbitos de variables
+
+    6. Operadores
+
+    7. Concatenación
     
