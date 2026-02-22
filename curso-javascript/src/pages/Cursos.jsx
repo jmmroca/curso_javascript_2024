@@ -1,6 +1,7 @@
 // src/pages/Cursos.jsx
 import { useMemo } from "react";
 import PageShell from "../components/PageShell";
+import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 /** Slug seguro para URLs a partir del nombre del curso */
@@ -57,51 +58,32 @@ export default function Cursos() {
 
   return (
     <PageShell>
-      <div
-        className="
-        min-h-screen text-textc antialiased
-        bg-[radial-gradient(1200px_700px_at_15%_0%,theme(colors.bg.backdrop)_0%,theme(colors.bg.DEFAULT)_60%)]
-      "
-      >
-        {/* Contenido */}
-        <main className="px-5 py-8 md:px-6 md:py-12">
-          <div className="max-w-content mx-auto">
-            <h1 className="font-bold tracking-[0.2px] text-[28px] md:text-h1 mb-4">
-              Cursos que impartimos
-            </h1>
-            <p className="text-textc-muted font-medium -mt-1 mb-6">
-              Selección inicial de cursos. Próximamente añadiremos más
-              itinerarios y actividades prácticas.
-            </p>
-
-            <div className="divide-y divide-divider">
-              {cursos.map((curso) => {
-                const slug = toSlug(curso.nombre);
-                return (
-                  <section key={slug} className="py-6 first:pt-0">
-                    <h2 className="font-bold text-[22px] md:text-h2 leading-snug mb-2">
-                      {curso.nombre}
-                    </h2>
-                    <p className="mb-3">{curso.descripcion}</p>
-                    <p>
-                      <Link
-                        to={`/detalle-curso/${slug}`}
-                        className="text-accent hover:text-accent-hover underline-offset-4 hover:underline"
-                        aria-label={`Ver detalles del curso ${curso.nombre}`}
-                      >
-                        Ver detalles del curso
-                      </Link>
-                    </p>
-                  </section>
-                );
-              })}
-            </div>
-
-            <p className="text-textc-muted mt-6">
-              ¿Buscas otro contenido? Contáctanos para próximas convocatorias.
-            </p>
+      <div className="page">
+        <section>
+          <h2 className="section-title">Cursos disponibles</h2>
+          <p className="section-sub">
+            Selecciona un curso para ver el contenido.
+          </p>
+          <div className="courses-grid">
+            {cursos.map((curso) => {
+              const slug = toSlug(curso.nombre);
+              return (
+                <article key={slug} className="course-card">
+                  <h3 className="course-title">{curso.nombre}</h3>
+                  <p className="course-desc">{curso.descripcion}</p>
+                  <Link
+                    to={`/detalle-curso/${slug}`}
+                    className="course-link"
+                    aria-label={`Ver detalles del curso ${curso.nombre}`}
+                  >
+                    Ver detalles del curso
+                  </Link>
+                </article>
+              );
+            })}
           </div>
-        </main>
+        </section>
+        <Footer />
       </div>
     </PageShell>
   );

@@ -8,7 +8,6 @@ import '../src/css/app.css';
 import '../src/css/home.css';
 
 import DetallesCursoJavascript from "./components/DetallesCursoJavascript";
-import Variables001 from "./pages/cursoJavascript/Variables001";
 
 function App() {
   return (
@@ -18,8 +17,6 @@ function App() {
       <Route path="/cursos" element={<Cursos />} />
       <Route path="/detalle-curso/javascript" element={<DetallesCursoJavascript />} />
       <Route path="/curso/javascript" element={<CursoJavascript />} />
-
-      <Route path="/variables" element={<Variables001 />} />
 
       <Route path="*" element={<Home />} />
     </Routes>
