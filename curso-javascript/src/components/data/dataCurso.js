@@ -1,12 +1,10 @@
-import Variables001 from "../../Variables001.jsx";
-import Variables002 from "../../Variables002.jsx";
-import Variables003 from "../../Variables003.jsx";
-import TiposDatos004 from "../../TiposDatos004.jsx";
-import AmbitosVariables005 from "../../AmbitosVariables005.jsx";
-import Operadores006 from "../../Operadores006.jsx";
-import Concatenacion007 from "../../Concatenacion007.jsx";
-
-
+import Variables001 from "../../pages/cursoJavascript/Variables001.jsx";
+import Variables002 from "../../pages/cursoJavascript/Variables002.jsx";
+import Variables003 from "../../pages/cursoJavascript/Variables003.jsx";
+import TiposDatos004 from "../../pages/cursoJavascript/TiposDatos004.jsx";
+import AmbitosVariables005 from "../../pages/cursoJavascript/AmbitosVariables005.jsx";
+import Operadores006 from "../../pages/cursoJavascript/Operadores006.jsx";
+import Concatenacion007 from "../../pages/cursoJavascript/Concatenacion007.jsx";
 
 export const dataCurso = {
   paginas: [

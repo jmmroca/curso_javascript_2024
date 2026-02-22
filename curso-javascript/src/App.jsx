@@ -7,8 +7,8 @@ import Cursos from "./pages/Cursos";
 import '../src/css/app.css';
 import '../src/css/home.css';
 
-import Variables001 from "./Variables001";
 import DetallesCursoJavascript from "./components/DetallesCursoJavascript";
+import Variables001 from "./pages/cursoJavascript/Variables001";
 
 function App() {
   return (

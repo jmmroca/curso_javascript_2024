@@ -11,7 +11,12 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
         className="btn-ghost"
         onClick={() => setPaginaActual(paginaActual > 1 ? paginaActual - 1 : 1)}
       >
-        <ArrowLeft size={28} strokeWidth={2.5} absoluteStrokeWidth  color="#3B82F6"/>
+        <ArrowLeft
+          size={28}
+          strokeWidth={2.5}
+          absoluteStrokeWidth
+          color="#3B82F6"
+        />
       </button>
       <p>
         {paginaActual} de {paginaMaxima}
@@ -25,7 +30,12 @@ function BarraSuperior({ paginaActual, setPaginaActual }) {
           )
         }
       >
-        <ArrowRight size={28} strokeWidth={2.5} absoluteStrokeWidth color="#3B82F6" />
+        <ArrowRight
+          size={28}
+          strokeWidth={2.5}
+          absoluteStrokeWidth
+          color="#3B82F6"
+        />
       </button>
     </div>
   );

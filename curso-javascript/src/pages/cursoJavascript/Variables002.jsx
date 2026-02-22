@@ -1,12 +1,17 @@
-import BloqueCodigo from "./components/BloqueCodigo";
-import TitleContainer from "./components/TitleContainer";
-import variable from "./assets/variable.jpg";
+import BloqueCodigo from "../../components/BloqueCodigo";
+import TitleContainer from "../../components/TitleContainer";
+import variable from "../../assets/variable.jpg";
 
 function Variables002({ copySnippet }) {
   return (
     <>
       <section>
-        <TitleContainer titulo={"Variables"} imagen={variable} subtitulo={"Variables II en JavaScript"} imagenGrande={false}/>
+        <TitleContainer
+          titulo={"Variables"}
+          imagen={variable}
+          subtitulo={"Variables II en JavaScript"}
+          imagenGrande={false}
+        />
         <p>
           En esta sección, aprenderemos sobre las variables en JavaScript, como
           seguir las buenas prácticas para nombrarlas.
@@ -22,7 +27,7 @@ function Variables002({ copySnippet }) {
             let e = 30;             // Mal nombre 
           `}
         />
-        <BloqueCodigo 
+        <BloqueCodigo
           copySnippet={copySnippet}
           titulo="2. Usar camelCase para múltiples palabras: la primera palabra en minúscula y las siguientes con la primera letra en mayúscula"
           codigo={`
