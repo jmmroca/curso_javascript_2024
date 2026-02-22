@@ -1,4 +1,5 @@
 // src/components/PageShell.jsx
+import Footer from "./Footer";
 import LogoHeader from "./LogoHeader";
 import MenuPrincipal from "./MenuPrincipal";
 
@@ -17,6 +18,7 @@ export default function PageShell({ children }) {
       <main className="px-5 py-8 md:px-6 md:py-12">
         <div className="max-w-content mx-auto">{children}</div>
       </main>
+      <Footer />
     </div>
   );
 }

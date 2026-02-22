@@ -1,14 +1,11 @@
-import { useEffect } from "react";
+import Footer from "../components/Footer";
 import PageShell from "../components/PageShell";
+
 
 // src/pages/Home.jsx
 function Home() {
-  useEffect(() => {
-    const yearElement = document.getElementById("year");
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  }, []);
+
+  
   return (
     <PageShell>
       <div className="page">
@@ -245,18 +242,6 @@ function Home() {
             con foco en la enseñanza práctica y en el contexto de FP.
           </p>
         </section>
-
-        <footer className="footer">
-          <span>
-            © <span id="year"></span> Campus Código. Todos los derechos
-            reservados.
-          </span>
-          <div className="footer-links">
-            <a href="#cursos">Cursos</a>
-            <a href="#ruta">Ruta</a>
-            <a href="#sobre-mi">Contacto</a>
-          </div>
-        </footer>
       </div>
     </PageShell>
   );
